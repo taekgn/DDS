@@ -1,0 +1,813 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Reading design: dds.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "dds.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "dds"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : dds
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\REG.vhd" into library work
+Parsing entity <REG>.
+Parsing architecture <behavior> of entity <reg>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\ffsr.vhd" into library work
+Parsing entity <ffsr>.
+Parsing architecture <Behavioral> of entity <ffsr>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\ff.vhd" into library work
+Parsing entity <FF>.
+Parsing architecture <Behavioral> of entity <ff>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\wave_gen.vhd" into library work
+Parsing entity <wave_gen>.
+Parsing architecture <behavior> of entity <wave_gen>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\shifter.vhd" into library work
+Parsing entity <shifter>.
+Parsing architecture <beh> of entity <shifter>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\phase_accu.vhd" into library work
+Parsing entity <phase_accu>.
+Parsing architecture <behavior> of entity <phase_accu>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\div8.vhd" into library work
+Parsing entity <DIV8>.
+Parsing architecture <bhv> of entity <div8>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\DIV4096.vhd" into library work
+Parsing entity <DIV4096>.
+Parsing architecture <bhv> of entity <div4096>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\DIV16.vhd" into library work
+Parsing entity <DIV16>.
+Parsing architecture <bhv> of entity <div16>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\debounce.vhd" into library work
+Parsing entity <debounce>.
+Parsing architecture <Behavioral> of entity <debounce>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\dac_interface.vhd" into library work
+Parsing entity <dac_interface>.
+Parsing architecture <behave> of entity <dac_interface>.
+Parsing VHDL file "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\dds.vhd" into library work
+Parsing entity <dds>.
+Parsing architecture <Behavioral> of entity <dds>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <dds> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DIV8> (architecture <bhv>) from library <work>.
+WARNING:HDLCompiler:92 - "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\div8.vhd" Line 27: tmp should be on the sensitivity list of the process
+
+Elaborating entity <DIV4096> (architecture <bhv>) from library <work>.
+WARNING:HDLCompiler:92 - "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\DIV4096.vhd" Line 27: clk_i should be on the sensitivity list of the process
+
+Elaborating entity <DIV16> (architecture <bhv>) from library <work>.
+WARNING:HDLCompiler:92 - "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\DIV16.vhd" Line 45: clk_i should be on the sensitivity list of the process
+
+Elaborating entity <debounce> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <FF> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <shifter> (architecture <beh>) from library <work>.
+
+Elaborating entity <ffsr> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <phase_accu> (architecture <behavior>) from library <work>.
+
+Elaborating entity <REG> (architecture <behavior>) from library <work>.
+
+Elaborating entity <wave_gen> (architecture <behavior>) from library <work>.
+
+Elaborating entity <dac_interface> (architecture <behave>) from library <work>.
+WARNING:Xst:2972 - "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\dds.vhd" line 93. All outputs of instance <uut_div4096> of block <DIV4096> are unconnected in block <dds>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <dds>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\dds.vhd".
+INFO:Xst:3210 - "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\dds.vhd" line 93: Output port <q> of the instance <uut_div4096> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <dds> synthesized.
+
+Synthesizing Unit <DIV8>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\div8.vhd".
+    Found 1-bit register for signal <tmp>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_4_o_add_0_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <DIV8> synthesized.
+
+Synthesizing Unit <DIV16>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\DIV16.vhd".
+    Found 1-bit register for signal <clk_i>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_7_o_add_0_OUT> created at line 36.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <DIV16> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\debounce.vhd".
+    Summary:
+	no macro.
+Unit <debounce> synthesized.
+
+Synthesizing Unit <FF>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\ff.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FF> synthesized.
+
+Synthesizing Unit <shifter>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\shifter.vhd".
+    Summary:
+	no macro.
+Unit <shifter> synthesized.
+
+Synthesizing Unit <ffsr>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\ffsr.vhd".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ffsr> synthesized.
+
+Synthesizing Unit <phase_accu>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\phase_accu.vhd".
+    Found 16-bit register for signal <realoutput>.
+    Found 16-bit adder for signal <regin> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <phase_accu> synthesized.
+
+Synthesizing Unit <REG>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\REG.vhd".
+    Found 16-bit register for signal <q_buffer>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <REG> synthesized.
+
+Synthesizing Unit <wave_gen>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\wave_gen.vhd".
+    Found 32x7-bit Read Only RAM for signal <Q<6:0>>
+    Summary:
+	inferred   1 RAM(s).
+Unit <wave_gen> synthesized.
+
+Synthesizing Unit <dac_interface>.
+    Related source file is "\\files.kent.ac.uk\userst\tj208\home\EL568 - CAD1\CAD1_G41_tj208\bit_file\dac_interface.vhd".
+    Found 1-bit register for signal <cs_buffer>.
+    Found 2-bit register for signal <handler>.
+    Found 16-bit register for signal <d_buffer>.
+    Found 32-bit register for signal <sync_pro.index>.
+    Found 1-bit register for signal <Sd_buffer>.
+    Found 1-bit register for signal <sclkbegin>.
+    Found finite state machine <FSM_0> for signal <handler>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (falling_edge)                             |
+    | Reset              | res (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | dormant                                        |
+    | Power Up State     | dormant                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <sync_pro.index[31]_GND_17_o_add_0_OUT> created at line 61.
+    Found 32-bit comparator greater for signal <sync_pro.index[31]_GND_17_o_LessThan_2_o> created at line 62
+    Found 32-bit comparator greater for signal <GND_17_o_sync_pro.index[31]_LessThan_3_o> created at line 68
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  51 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <dac_interface> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x7-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 3
+# Registers                                            : 17
+ 1-bit register                                        : 11
+ 16-bit register                                       : 3
+ 32-bit register                                       : 3
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <realoutput_5> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_6> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_7> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_8> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_9> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_10> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_11> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_12> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_13> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_14> of sequential type is unconnected in block <uut_accu>.
+WARNING:Xst:2677 - Node <realoutput_15> of sequential type is unconnected in block <uut_accu>.
+
+Synthesizing (advanced) Unit <DIV16>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <DIV16> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DIV8>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <DIV8> synthesized (advanced).
+
+Synthesizing (advanced) Unit <phase_accu>.
+The following registers are absorbed into accumulator <preg/q_buffer>: 1 register on signal <preg/q_buffer>.
+Unit <phase_accu> synthesized (advanced).
+
+Synthesizing (advanced) Unit <wave_gen>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Q<6:0>> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <D>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Q>             |          |
+    -----------------------------------------------------------------------
+Unit <wave_gen> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x7-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 2
+# Accumulators                                         : 1
+ 16-bit up accumulator                                 : 1
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 6
+ 1-bit 2-to-1 multiplexer                              : 3
+ 16-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <uut_dac/FSM_0> on signal <handler[1:2]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ initialize | 00
+ padding    | 01
+ serial_tx  | 10
+ dormant    | 11
+------------------------
+WARNING:Xst:1293 - FF/Latch <d_buffer_0> has a constant value of 0 in block <dac_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d_buffer_1> has a constant value of 0 in block <dac_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d_buffer_2> has a constant value of 0 in block <dac_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <d_buffer_3> has a constant value of 0 in block <dac_interface>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <dds> ...
+
+Optimizing unit <phase_accu> ...
+
+Optimizing unit <dac_interface> ...
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_15> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_14> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_13> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_12> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_11> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_10> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_9> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_8> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_7> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_6> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/preg/q_buffer_5> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_15> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_14> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_13> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_12> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_11> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_10> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_9> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_8> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_7> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_6> of sequential type is unconnected in block <dds>.
+WARNING:Xst:2677 - Node <uut_accu/realoutput_5> of sequential type is unconnected in block <dds>.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_25> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_26> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_27> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_28> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_29> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_30> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_31> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_31> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_30> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_29> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_28> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_27> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_26> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_24> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_23> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_25> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_22> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_21> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_20> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_19> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_18> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_4> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_5> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_6> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_7> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_8> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_9> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_10> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_11> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_12> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_13> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_14> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_15> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_16> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_17> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_18> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_19> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_20> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_21> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_22> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_23> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_dac/sync_pro.index_24> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_4> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_7> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_5> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_6> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_8> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_9> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_10> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_11> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_12> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_13> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_16> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_14> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_15> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uut_div16/count_17> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_16> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_15> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_14> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_13> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_12> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_11> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_10> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_9> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_8> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_7> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_6> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_5> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_4> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_3> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_17> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_18> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_19> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_20> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_21> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_22> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_23> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_24> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_25> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_26> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_27> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_28> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_29> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_30> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uut_div8/count_31> has a constant value of 0 in block <dds>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block dds, actual ratio is 1.
+FlipFlop uut_div16/clk_i has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <dds> :
+	Found 2-bit shift register for signal <uut_debounce/ff2/Q>.
+Unit <dds> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : dds.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 123
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 10
+#      LUT2                        : 19
+#      LUT3                        : 14
+#      LUT4                        : 8
+#      LUT5                        : 14
+#      LUT6                        : 3
+#      MUXCY                       : 31
+#      VCC                         : 1
+#      XORCY                       : 17
+# FlipFlops/Latches                : 46
+#      FD                          : 2
+#      FD_1                        : 2
+#      FDC                         : 4
+#      FDCE_1                      : 16
+#      FDE                         : 1
+#      FDP_1                       : 3
+#      FDR                         : 8
+#      FDRE                        : 10
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 5
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              46  out of  18224     0%  
+ Number of Slice LUTs:                   74  out of   9112     0%  
+    Number used as Logic:                73  out of   9112     0%  
+    Number used as Memory:                1  out of   2176     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     82
+   Number with an unused Flip Flop:      36  out of     82    43%  
+   Number with an unused LUT:             8  out of     82     9%  
+   Number of fully used LUT-FF pairs:    38  out of     82    46%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    232     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+uut_div8/tmp                       | BUFG                   | 43    |
+mclk                               | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.251ns (Maximum Frequency: 190.433MHz)
+   Minimum input arrival time before clock: 3.655ns
+   Maximum output required time after clock: 5.248ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'uut_div8/tmp'
+  Clock period: 5.251ns (frequency: 190.433MHz)
+  Total number of paths / destination ports: 344 / 101
+-------------------------------------------------------------------------
+Delay:               2.626ns (Levels of Logic = 2)
+  Source:            uut_accu/realoutput_0 (FF)
+  Destination:       uut_dac/d_buffer_9 (FF)
+  Source Clock:      uut_div8/tmp rising
+  Destination Clock: uut_div8/tmp falling
+
+  Data Path: uut_accu/realoutput_0 to uut_dac/d_buffer_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   1.089  uut_accu/realoutput_0 (uut_accu/realoutput_0)
+     LUT5:I0->O            1   0.203   0.580  uut_dac/Mmux_handler[1]_d_buffer[15]_wide_mux_7_OUT131 (uut_dac/Mmux_handler[1]_d_buffer[15]_wide_mux_7_OUT13)
+     LUT5:I4->O            1   0.205   0.000  uut_dac/d_buffer_7_dpot (uut_dac/d_buffer_7_dpot)
+     FDCE_1:D                  0.102          uut_dac/d_buffer_7
+    ----------------------------------------
+    Total                      2.626ns (0.957ns logic, 1.669ns route)
+                                       (36.4% logic, 63.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 2.870ns (frequency: 348.450MHz)
+  Total number of paths / destination ports: 19 / 4
+-------------------------------------------------------------------------
+Delay:               2.870ns (Levels of Logic = 5)
+  Source:            uut_div8/count_0 (FF)
+  Destination:       uut_div8/count_2 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: uut_div8/count_0 to uut_div8/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.447   0.714  uut_div8/count_0 (uut_div8/count_0)
+     INV:I->O              1   0.206   0.000  uut_div8/Mcount_count_lut<0>_INV_0 (uut_div8/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  uut_div8/Mcount_count_cy<0> (uut_div8/Mcount_count_cy<0>)
+     MUXCY:CI->O           0   0.019   0.000  uut_div8/Mcount_count_cy<1> (uut_div8/Mcount_count_cy<1>)
+     XORCY:CI->O           1   0.180   0.827  uut_div8/Mcount_count_xor<2> (Result<2>)
+     LUT4:I0->O            1   0.203   0.000  uut_div8/Mcount_count_eqn_21 (uut_div8/Mcount_count_eqn_2)
+     FDC:D                     0.102          uut_div8/count_2
+    ----------------------------------------
+    Total                      2.870ns (1.329ns logic, 1.541ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'uut_div8/tmp'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.655ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       uut_div16/count_2 (FF)
+  Destination Clock: uut_div8/tmp rising
+
+  Data Path: clr to uut_div16/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.222   1.118  clr_IBUF (clr_IBUF)
+     LUT5:I0->O            4   0.203   0.683  uut_div16/Mcount_count_val321 (uut_div16/Mcount_count_val)
+     FDR:R                     0.430          uut_div16/count_0
+    ----------------------------------------
+    Total                      3.655ns (1.855ns logic, 1.800ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              2.425ns (Levels of Logic = 1)
+  Source:            clr (PAD)
+  Destination:       uut_div8/count_0 (FF)
+  Destination Clock: mclk rising
+
+  Data Path: clr to uut_div8/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.222   0.773  clr_IBUF (clr_IBUF)
+     FDC:CLR                   0.430          uut_div8/count_0
+    ----------------------------------------
+    Total                      2.425ns (1.652ns logic, 0.773ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.521ns (Levels of Logic = 2)
+  Source:            uut_div8/tmp (FF)
+  Destination:       sclk (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: uut_div8/tmp to sclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.721  uut_div8/tmp (uut_div8/tmp)
+     LUT2:I0->O            1   0.203   0.579  uut_dac/SCLK1 (sclk_OBUF)
+     OBUF:I->O                 2.571          sclk_OBUF (sclk)
+    ----------------------------------------
+    Total                      4.521ns (3.221ns logic, 1.300ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'uut_div8/tmp'
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Offset:              5.248ns (Levels of Logic = 2)
+  Source:            uut_div16/clk_i (FF)
+  Destination:       data_1 (PAD)
+  Source Clock:      uut_div8/tmp rising
+
+  Data Path: uut_div16/clk_i to data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              33   0.447   1.410  uut_div16/clk_i (uut_div16/clk_i)
+     LUT2:I0->O            2   0.203   0.616  uut_dac/Mmux_data_211 (data_1_OBUF)
+     OBUF:I->O                 2.571          data_1_OBUF (data_1)
+    ----------------------------------------
+    Total                      5.248ns (3.221ns logic, 2.027ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock mclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+mclk           |    2.870|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uut_div8/tmp
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+uut_div8/tmp   |    3.204|         |    4.198|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.73 secs
+ 
+--> 
+
+Total memory usage is 298752 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  126 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "Z:/EL568 - CAD1/CAD1_G41_tj208/bit_file/dds.xst" -ofn "Z:/EL568 - CAD1/CAD1_G41_tj208/bit_file/dds.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3.ucf -p xc6slx16-csg324-3 "dds.ngc" dds.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dds_map.ncd dds.ngd dds.pcf 
+par -w -intstyle ise -ol high -mt off dds_map.ncd dds.ncd dds.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml dds.twx dds.ncd -o dds.twr dds.pcf -ucf Nexys3.ucf 
+bitgen -intstyle ise -f dds.ut dds.ncd 

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Z:\EL568 - CAD1\CAD1_G41_tj208\bit_file\impact.xsl
+OUTFILE=Z:\EL568 - CAD1\CAD1_G41_tj208\bit_file\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=Z:\EL568 - CAD1\CAD1_G41_tj208\bit_file
+LICENSE=iMPACT
+USER_INFO=iMPACT
