@@ -1,6 +1,6 @@
 # Direct Digital Synthesiser (DDS) Circuit
 
-## Timing Generation (**DIV8**, **DIV16**, **DIV4096**).
+## Timing Generation (**DIV8**, **DIV16**, **DIV4096**)
 These 3 components can be found in Figure 2. The Nexys-3 board has a 100 MHz crystal clock. In this design the internal logic on the FPGA will use a 12.5 MHz clock. This is achieved by building a “divide by 8” counter (called **DIV8**) which produces the internal **CLK** signal from the Master clock input (**MCLK**) which is connected to Pin V10 of the FPGA on the development board.
 Hint: draw the timings diagram on a sheet of paper before you start any coding.
 
@@ -9,7 +9,7 @@ Begin this laboratory by building a VHDL model and a test bench for each of thes
 
 ## The Debounce Circuit (DEBOUNCE) Implemented by SYNC
 
-Four slider switches (SW7 – SW4) will be used to program the output frequency of the phase accumulator (Pins T5, V8, U8, N8 respectively). To ensure proper operation of the circuit it is advisable to build a debounce circuit to ensure that there are no asynchronous glitches on these signals. Another debounce circuit is also required for Reset input which is connected to a push- button on the Nexys-3 board (Pin V2). The schematic shown in Fig 3 uses a Sync circuit rather than a proper debounce circuit (a simpler version..).
+Four slider switches (SW7 – SW4) will be used to program the output frequency of the phase accumulator (Pins T5, V8, U8, N8 respectively). To ensure proper operation of the circuit it is advisable to build a debounce circuit to ensure that there are no asynchronous glitches on these signals. Another debounce circuit is also required for Reset input which is connected to a push- button on the Nexys-3 board (Pin V2). The schematic shown in Fig 3 uses a Sync circuit rather than a proper debounce circuit (a simpler version).
 
 ## The Phase Accumulator (**PHASE_ACCU**) Circuit
 The Phase Accumulator is built using an adder and a register with a synchronous reset RES as shown in Figure 4. On the rising edge of the clock, if CE = 1 the output of the adder will be stored in the 16-bit register. The adder is used to accumulate the previous value of the accumulator with the 4-bit input D. The output of the register will be used as the input into the waveform generator.
