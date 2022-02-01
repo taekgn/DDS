@@ -24,7 +24,37 @@ Each laboratory group will be asked to generate a unique waveform generation cir
 The circuit has a 5-bit input and will take 5 of the 16 output bits from the **PHASE_ACCU** circuit and use them to generate a 12-bit output that will be used as an input to the **DAC_INTERFACE** circuit. Which output bits should it take? The selection of which bits to use is done in the Port Mapping for this component in the DDS top level design.
 The best method for generating an arbitrary waveform is by means of a lookup table (known as a LUT). In this experiment, you have 5 bits input, which will define how many entries there are in the table and 12 bits output which defines how big each entry is.
 You need to create a look up table with maps the input entries to a corresponding output value for the waveform which is available in your Moodle submission folder.
-Excel is a useful tool for generating such data tables. Bear in mind that waves are symmetrical about 0, but the output must always be a positive number.
+Excel is a useful tool for generating such data tables. Bear in mind that waves are symmetrical about 0, but the output must always be a positive number.  
+
+### Python code for Look up table
+ ```python
+import numpy as numpy
+import matplotlib.pyplot as plt
+
+np=32; #Sampling rate
+A=32;  #Amplitude
+t=numpy.linspace(0,1-1/np,np) #Sampling periodic time vector
+lu_table = (numpy.round(numpy.sin(2*numpy.pi*t*2)*A+numpy.cos(2*numpy.pi*t)*A)+60)
+print(lu_table)
+#creates trigonometry lookup table i.e. beyond range of -1 : 1
+#60 added to convert everything into positive number
+plt.plot(lu_table) #plots diagram to compare visually
+plt.show()
+```
+
+### MATLAB code for Look up table
+ ```matlab
+function lookup
+np=32; %sampling rate
+A=32; %Amplitude
+t=linspace(0,1-1/np,np); %Interval
+lu_table = (round(sin(2*pi*t*2)*A+cos(2*pi*t)*A)+60)
+%creates trigonometry lookup table
+%60 added to convert everything into positive number
+plot(lu_table); %plots diagram to compare visually
+title("sin(2*pi*t*2)*A+cos(2*pi*t)*A+60");
+end
+```
 
 ## The DAC Interface Circuit (DAC_INTERFACE)
 
